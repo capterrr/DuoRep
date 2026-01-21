@@ -1,38 +1,10 @@
-﻿using Domain.LocationsContext.ValueObjects;
-<<<<<<< HEAD
-using Domain.Position.ValueObjects;
-=======
->>>>>>> cf601eb (добавил модели)
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Net.Sockets;
-using System.Reflection.Metadata.Ecma335;
 using System.Text;
-<<<<<<< HEAD
-using static Domain.LocationsContext.ValueObjects.LocationAdderss;
 
-namespace Domain.LocationsContext;
-public class Location
+namespace Domain.LocationsContext.ValueObjects
 {
-    public Location (Locationid id, LocationName name, LocationAddress address, EntityLifeTime lifeTime, IanaTimeZone timeZone)
-    {
-        Id = id;
-        Name = name;
-        Address = address;
-        LifeTime = lifeTime;
-        TimeZone = timeZone;
-    }
-    public Locationid Id { get; }
-    public LocationName Name { get; }
-    public LocationAddress Address { get; }
-    public EntityLifeTime LifeTime { get; }
-    public IanaTimeZone TimeZone { get; }
-}
-=======
-
-namespace Domain.LocationsContext
-{
-    public sealed class EntityLifeTime
+    internal class EntityLifeTime
     {
         public DateTime CreatedAt { get; }
         public DateTime UpdatedAt { get; }
@@ -65,5 +37,8 @@ namespace Domain.LocationsContext
             return new EntityLifeTime(createdAt, updatedAt, isActivate);
         }
     }
+
 }
->>>>>>> cf601eb (добавил модели)
+
+    
+
