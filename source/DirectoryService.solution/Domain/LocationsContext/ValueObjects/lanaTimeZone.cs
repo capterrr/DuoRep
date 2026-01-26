@@ -5,6 +5,7 @@ using System.Text;
 namespace Domain.LocationsContext.ValueObjects
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     public sealed class IanaTimeZone
     {
         public string Value { get; }
@@ -17,15 +18,26 @@ namespace Domain.LocationsContext.ValueObjects
 
         private lanaTimeZone(string value)
 >>>>>>> cf601eb (добавил модели)
+=======
+    public sealed class IanaTimeZone
+    {
+        public string Value { get; }
+
+        private IanaTimeZone(string value)
+>>>>>>> 3b70da4 (Сделал работу)
         {
             Value = value;
         }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         public static IanaTimeZone Create(string value)
 =======
         public static lanaTimeZone Create(string value)
 >>>>>>> cf601eb (добавил модели)
+=======
+        public static IanaTimeZone Create(string value)
+>>>>>>> 3b70da4 (Сделал работу)
         {
             if (string.IsNullOrWhiteSpace(value))
                 throw new ArgumentException("IANA временная зона не может быть пустой.", nameof(value));
@@ -53,10 +65,14 @@ namespace Domain.LocationsContext.ValueObjects
             }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             return new IanaTimeZone(value);
 =======
             return new lanaTimeZone(value);
 >>>>>>> cf601eb (добавил модели)
+=======
+            return new IanaTimeZone(value);
+>>>>>>> 3b70da4 (Сделал работу)
         }
     }
 }
