@@ -1,23 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Diagnostics;
 
-namespace Domain.Department.ValueObjects
+namespace Domain.Department.ValueObjects;
+
+public sealed record DepartmentPath
 {
-    public class DepartmentPath
+    public const char separator = '.';
+    private DepartmentPath(string value)
     {
-        public string Value { get; }
-        private DepartmentPath(string value)
-        {
-            Value = value;
-        }
-        public static DepartmentPath Create(string value)
-        {
-            if (value == string.Empty)
-            {
-                throw new ArgumentException("Путь не может быть пустым.", nameof(value));
-            }
-            return new DepartmentPath(value);
-        }
+     Value = value;
     }
+
+    public string Value { get; }
+
+    public static DepartmentPath Create (string path)
+    {
+        if (string.IsNullOrWhiteSpace(path))
+        {
+            throw new ArgumentNullException ("Ошибка! В строке пути ничего нет");
+        }
+        return new DepartmentPath(path);
+        
+
+
+    }
+    
+
 }

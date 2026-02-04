@@ -1,9 +1,6 @@
-﻿using Domain.Position.ValueObjects;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿namespace Domain.Department.ValueObjects;
 
-namespace Domain.Department.ValueObjects
+public sealed record DepartmentId(Guid Value)
 {
-    public record DepartmentId(Id Id);
- }
+    public DepartmentId() : this(Guid.NewGuid()) { }
+}
